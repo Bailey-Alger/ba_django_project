@@ -1,0 +1,29 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'resume/style.css' %}">
+</head>
+
+<body>
+    <h1>Create Account</h1>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'resume-home' %}">&nbsp;About Me&nbsp;</a></li>
+            <li><a href="feedback">&nbsp;Feedback&nbsp;</a></li>
+            <li><a href="create"><span class="selected">&nbsp;Create Temporary Account&nbsp;</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p>Click the button to get a username and password!</p>
+        <p>All accounts will last 3 days before being deleted.</p>
+        <input type="submit" value="Create">
+    </main>
+</body>
+
+</html>
