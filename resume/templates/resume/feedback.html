@@ -9,19 +9,26 @@
 </head>
 
 <body>
-    <h1>Feedback</h1>
+    <div id="wrapper">
+        <header>
+            <div id="header">
+                <div id="name">
+                    <h1>Bailey Alger</h1>
+                </div>
+                <div id="navigation">
+                    <a href="{% url 'resume-home' %}">&nbsp;About Me&nbsp;</a>
+                    <a href="feedback"><span class="selected">&nbsp;Feedback&nbsp;</span></a>
+                    <a href="create">&nbsp;Create Temporary Account&nbsp;</a>
 
-    <nav>
-        <ul>
-            <li><a href="{% url 'resume-home' %}">&nbsp;About Me&nbsp;</a></li>
-            <li><a href="feedback"><span class="selected">&nbsp;Feedback&nbsp;</span></a></li>
-            <li><a href="create">&nbsp;Create Temporary Account&nbsp;</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <p>Some text.</p>
-    </main>
+                </div>
+                <!--navigation-->
+            </div>
+        </header>
+        <div id="test">
+            <p>Some text.</p>
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>
