@@ -7,40 +7,56 @@ body {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 h2 {
-    color: #00b3ff;
+    margin: 0;
 }
 
 h3 {
-    font-size: 24px;
-    font-family: Tahoma, Geneva;
+    color: rgb(168, 168, 168);
+    font-weight: normal;
+    margin: 0;
+    font-size: 17px;
 }
 
-hr {
-    background-color: blue;
-    height: 2px;
+h4 {
+    padding-left: 30px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+h5 {
+    padding-left: 50px;
+    /*change font*/
 }
 
 p {
-    font-family: Tahoma, Geneva;
-    text-align: left;
+    font-size: 14px;
+    padding-left: 50px;
+}
+
+#bio {
+    width: 1075px;
+    height: 250px;
+    position: relative;
+}
+
+#biotext {
+    width: 500px;
+    height: 250px;
+    float: right;
+    position: absolute;
+    right: 75px;
 }
 
 #header {
     width: 1075px;
-    height: 244px;
+    height: 180px;
     position: relative;
 }
 
@@ -55,16 +71,17 @@ p {
 #navigation {
     position: absolute;
     top: 20px;
-    left: 600px;
+    left: 620px;
     width: 500px;
     height: 60px;
 }
 
 #navigation a {
-    color: rgb(83, 83, 83);
+    color: rgb(90, 90, 90);
     display: block;
     float: left;
-    padding: 20px 20px;
+    padding: 15px 20px;
+    font-size: 14px;
 }
 
 #navigation a:hover {
@@ -73,6 +90,25 @@ p {
 
 #navigation .selected {
     color: #000
+}
+
+#pfitem {
+    width: 535px;
+    height: 200px;
+    float: left;
+}
+
+#pfp {
+    width: 300px;
+    height: 250px;
+    float: left;
+    position: absolute;
+    left: 200px;
+}
+
+#portfolio {
+    width: 1075px;
+    height: 400px;
 }
 
 #test {
