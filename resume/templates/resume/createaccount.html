@@ -9,21 +9,27 @@
 </head>
 
 <body>
-    <h1>Create Account</h1>
-
-    <nav>
-        <ul>
-            <li><a href="{% url 'resume-home' %}">&nbsp;About Me&nbsp;</a></li>
-            <li><a href="feedback">&nbsp;Feedback&nbsp;</a></li>
-            <li><a href="create"><span class="selected">&nbsp;Create Temporary Account&nbsp;</span></a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <p>Click the button to get a username and password!</p>
-        <p>All accounts will last 3 days before being deleted.</p>
-        <input type="submit" value="Create">
-    </main>
+    <div id="wrapper" style="height:1100px">
+        <header>
+            <div id="header">
+                <div id="name">
+                    <h1>Bailey Alger</h1>
+                </div>
+                <div id="navigation">
+                    <a href="{% url 'resume-home' %}">&nbsp;About Me&nbsp;</a>
+                    <a href="feedback">&nbsp;Feedback&nbsp;</a>
+                    <a href="create"><span class="selected">&nbsp;Create Temporary Account&nbsp;</span></a>
+                </div>
+                <!--navigation-->
+            </div>
+        </header>
+        <div id="create">
+            <button type="button" onclick="createBtn()">
+                Create Temporary Account
+            </button>
+            <script src="{% static 'resume/btn.js' %}"></script>
+            <p id="accountinfo"></p>
+        </div>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import random
 
 
 def home(request):
@@ -12,3 +13,4 @@ def feedback(request):
 
 def create(request):
     return render(request, 'resume/createaccount.html')
+    

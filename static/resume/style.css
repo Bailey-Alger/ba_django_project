@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #00b3ff;
-    color: #000000;
+    background-image: url("/static/images/bluebg.jpg");
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -35,6 +34,13 @@ h5 {
     /*change font*/
 }
 
+h6 {
+    color: rgb(168, 168, 168);
+    font-weight: normal;
+    margin: 0 0 0 98px;
+    font-size: 12px;
+}
+
 p {
     font-size: 14px;
     padding-left: 50px;
@@ -52,6 +58,37 @@ p {
     float: right;
     position: absolute;
     right: 75px;
+}
+
+#form {
+    width: 500px;
+    height: fit-content;
+    float: left;
+    position: relative;
+    background-color: aqua;
+    padding: 0px 375px 0px 200px;
+}
+
+#form textarea {
+    max-width: 500px;
+    max-height: 300px;
+    min-width: 200px;
+    min-height: 100px;
+}
+
+#formarea
+
+/*may be depricated*/
+    {
+    background-color: rgb(121, 121, 121);
+    width: 1075px;
+    height: fit-content;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+#formheader {
+    width: 500px;
 }
 
 #header {
@@ -104,11 +141,17 @@ p {
     float: left;
     position: absolute;
     left: 200px;
+    background-color: red;
 }
 
 #portfolio {
     width: 1075px;
     height: 400px;
+}
+
+#posts {
+    width: 1075px;
+    height: 300px;
 }
 
 #test {
@@ -119,6 +162,7 @@ p {
     width: 1075px;
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     background-color: white;
     border-radius: 30px;
 }
