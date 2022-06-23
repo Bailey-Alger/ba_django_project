@@ -32,7 +32,11 @@
         </div>
         <!--form-->
         <div id="posts">
-            posts
+            {% for post in posts %}
+            <h4>{{ post.title }}</h4>
+            <p>By {{ post.author }} on {{ post.date_posted }}</p>
+            <p>{{ post.content }}</p>
+            {% endfor %}
         </div>
 </body>
 
