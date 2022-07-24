@@ -1,0 +1,63 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'resume/style.css' %}">
+</head>
+
+<body>
+    <div id="wrapper" style="height:1100px">
+        <header>
+            <div id="header">
+                <div id="name">
+                    <h1>Bailey Alger</h1>
+                </div>
+                <div id="navigation">
+                    <a href="{% url 'resume-home' %}">&nbsp;About Me&nbsp;</a>
+                    <a href="feedback">&nbsp;Feedback&nbsp;</a>
+                    <a href="create"><span class="selected">&nbsp;Create Temporary Account&nbsp;</span></a>
+                </div>
+                <!--navigation-->
+            </div>
+        </header>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alter alter-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        <div class="content-section">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom">
+                        Join Today
+                    </legend>
+                    {{ form.as_p }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-btnoutline-info" type="sumbit">Sign Up</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Aready Have an Account? <a class="ml-2" href="#">Sign In</a> </small>
+            </div>
+
+        </div>
+
+
+        <!--<div id="create">
+            <button type="button" onclick="createBtn()">
+                Create Temporary Account
+            </button>
+            <script src="{% static 'resume/btn.js' %}"></script>
+            <p id="accountinfo"></p>
+        </div> -->
+</body>
+
+</html>

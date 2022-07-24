@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'crispy_forms',
+    'users.apps.UsersConfig',
     'resume.apps.ResumeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -130,3 +132,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#CRISPY_TEMPLATE_PACK = 'boostrap4'
+# check crispy doccumentation for other settings

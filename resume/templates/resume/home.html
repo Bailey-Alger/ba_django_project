@@ -25,6 +25,13 @@
                 <!--navigation-->
             </div>
         </header>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alter alter-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
         <div id="bio">
             <div id="pfp">
                 pfp red
