@@ -135,3 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #CRISPY_TEMPLATE_PACK = 'boostrap4'
 # check crispy doccumentation for other settings
+
+LOGIN_REDIRECT_URL = 'feedback'
+LOGIN_URL = 'login'

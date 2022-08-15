@@ -1,43 +1,20 @@
-{% load static%}
+{% extends "resume/base.html" %}
+<!-- load crispy_forms_tags -->
+{% block content %}
 
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="{% static 'resume/style.css' %}">
-</head>
-
-<body>
-    <div id="wrapper" style="height:1100px">
-        <header>
-            <div id="header">
-                <div id="name">
-                    <h1>Bailey Alger</h1>
-                </div>
-                <div id="navigation">
-                    <a href="{% url 'resume-home' %}">&nbsp;About Me&nbsp;</a>
-                    <a href="feedback"><span class="selected">&nbsp;Feedback&nbsp;</span></a>
-                    <a href="create">&nbsp;Create Temporary Account&nbsp;</a>
-
-                </div>
-                <!--navigation-->
-            </div>
-        </header>
-        <div id="form">
-            <div id="formheader">
-                some text
-            </div>
-            <textarea name="fbtext" id="fbtext" cols="50" rows="10"></textarea>
-        </div>
-        <!--form-->
-        <div id="posts">
-            {% for post in posts %}
-            <h4>{{ post.title }}</h4>
-            <p>By {{ post.author }} on {{ post.date_posted|date:"F d, Y" }}</p>
-            <p>{{ post.content }}</p>
-            {% endfor %}
-        </div>
-</body>
-
-</html>
+<div id="form">
+    <div id="formheader">
+        some text
+    </div>
+    <textarea name="fbtext" id="fbtext" cols="50" rows="10"></textarea>
+</div>
+<!--form-->
+<div id="posts">
+    {% for post in posts %}
+    <h4>{{ post.title }}</h4>
+    <p>By {{ post.author }} on {{ post.date_posted|date:"F d, Y" }}</p>
+    <p>{{ post.content }}</p>
+    {% endfor %}
+</div>
+{% endblock content %}
