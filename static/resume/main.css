@@ -18,7 +18,7 @@ ul {
 }
 
 .bg-steel {
-    background-color: #5f788a;
+    background-color: #3c759e;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -43,6 +43,7 @@ ul {
 
 .article-title {
     color: #444444;
+    font-size: 24px;
 }
 
 a.article-title:hover {
@@ -86,4 +87,84 @@ a.article-title:hover {
 
 .account-heading {
     font-size: 2.5rem;
+}
+
+/* My section */
+
+.bio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.biotext {
+    width: 400px;
+    height: 250px;
+    padding: 10px 10px;
+    min-width: 400px;
+    margin: auto;
+}
+
+.form {
+    width: 500px;
+    height: fit-content;
+    float: left;
+    position: relative;
+    background-color: aqua;
+    padding: 0px 375px 0px 200px;
+}
+
+.form textarea {
+    max-width: 500px;
+    max-height: 300px;
+    min-width: 200px;
+    min-height: 100px;
+}
+
+.name {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: fit-content;
+    height: 60px;
+}
+
+.pfitem {
+    width: 535px;
+    height: 200px;
+    float: left;
+}
+
+.pfp {
+    width: 250px;
+    min-width: 250px;
+    height: 200px;
+    position: relative;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio {
+    width: 1075px;
+    height: 400px;
+}
+
+.posts {
+    width: 1075px;
+    height: 300px;
+}
+
+.test {
+    padding: 20px 30px;
+}
+
+.wrapper {
+    width: 1075px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 30px;
 }

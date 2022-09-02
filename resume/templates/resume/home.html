@@ -2,11 +2,11 @@
 {% block content %}
 
 
-<div id="bio">
-    <div id="pfp">
+<div class="bio">
+    <div class="pfp">
         pfp red
     </div>
-    <div id="biotext">
+    <div class="biotext">
         <h6>AL-jər</h6>
         <h2>
             Bailey Alger
@@ -22,38 +22,45 @@
     </div>
 </div>
 <!--bio-->
-<div id="portfolio">
-    <h4>
-        Portfolio
-    </h4>
-    <div id="pfitem">
-        <h5>
-            Relational Databases
-        </h5>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptate natus. Itaque facere
+<article class="media content-section">
+    <img class="rounded-circle article-img" src="#">
+    <div class="media-body">
+        <h2><a class="article-title" href="#">Relational Databases</a></h2>
+        <p class="article-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptate
+            natus. Itaque facere
             sit reiciendis fugiat. Accusamus soluta nostrum, unde dolor odit quidem voluptate officiis, magni
-            dicta excepturi illum ea.
-        </p>
+            dicta excepturi illum ea.</p>
     </div>
-    <div id="pfitem">
-        <h5>
-            DevOps
-        </h5>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, laborum autem omnis temporibus
-            optio vero. Quisquam sed voluptatibus autem et adipisci quia pariatur. Quas, harum in ipsam laborum
-            aspernatur labore.
-        </p>
-    </div>
-    <div id="pfitem">
-        <h5>item 3</h5>
-    </div>
-    <div id="pfitem">
-        <h5>item 4</h5>
-    </div>
+</article>
+<h4>
+    Portfolio
+</h4>
+<div class="pfitem">
+    <h5>
+        Relational Databases
+    </h5>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptate natus. Itaque facere
+        sit reiciendis fugiat. Accusamus soluta nostrum, unde dolor odit quidem voluptate officiis, magni
+        dicta excepturi illum ea.
+    </p>
 </div>
-<!--portfolio-->
+<div class="pfitem">
+    <h5>
+        DevOps
+    </h5>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, laborum autem omnis temporibus
+        optio vero. Quisquam sed voluptatibus autem et adipisci quia pariatur. Quas, harum in ipsam laborum
+        aspernatur labore.
+    </p>
+</div>
+<div class="pfitem">
+    <h5>item 3</h5>
+</div>
+<div class="pfitem">
+    <h5>item 4</h5>
+</div>
 </div>
 <!--wrapper-->
 {% endblock content %}
