@@ -74,9 +74,3 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
-
-# depricated
-
-
-def create(request):
-    return render(request, 'resume/createaccount.html')
