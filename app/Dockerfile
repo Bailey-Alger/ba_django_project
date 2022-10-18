@@ -1,5 +1,5 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.8-slim
+FROM python:3.8-alpine
 
 EXPOSE 8000
 
@@ -9,8 +9,12 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
+# install psycopg2 dependencies
+RUN apk update \
+    && apk add postgresql-dev gcc python3-dev musl-dev
+
 # Install pip requirements
-COPY requirements.txt .
+COPY ./requirements.txt .
 RUN python -m pip install -r requirements.txt
 
 WORKDIR /usr/src/app
