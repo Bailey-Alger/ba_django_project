@@ -1,5 +1,8 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.8-alpine
+FROM python:3.9.4-alpine
+
+#set work directory
+WORKDIR /usr/src/app
 
 EXPOSE 8000
 
@@ -14,11 +17,20 @@ RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev
 
 # Install pip requirements
+RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN python -m pip install -r requirements.txt
 
-WORKDIR /usr/src/app
+# copy entrypoint.sh
+COPY ./entrypoint.sh .
+RUN sed -i 's/\r$//g' /usr/src/app/entrypoint.sh
+RUN chmod +x /usr/src/app/entrypoint.sh
+
+#copy project
 COPY . .
+
+# run entrypoint.sh
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
