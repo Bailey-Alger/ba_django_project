@@ -11,4 +11,7 @@ then
     echo "PostgreSQL started"
 fi
 
+# create super user
+python manage.py createsuperuser --noinput
+
 exec "$@"
