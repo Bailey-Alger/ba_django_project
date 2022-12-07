@@ -29,7 +29,10 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = [
+    os.environ.get("DJANGO_ALLOWED_HOSTS").split(" "),
+    'ec2-3-20-22-254.us-east-2.compute.amazonaws.com'
+]
 
 
 # Application definition

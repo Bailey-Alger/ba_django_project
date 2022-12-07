@@ -5,6 +5,7 @@ services:
     build:
       context: ./app
       dockerfile: Dockerfile.prod
+    image: 370950449536.dkr.ecr.us-east-2.amazonaws.com/ba_django_project:ba_django_project_web
     command: gunicorn ba_django_project.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/home/app/web/staticfiles
@@ -23,6 +24,7 @@ services:
       - ./app/.env.prod.db
   nginx:
     build: ./nginx
+    image: 370950449536.dkr.ecr.us-east-2.amazonaws.com/ba_django_project:ba_django_project_nginx
     volumes:
       - static_volume:/home/app/web/staticfiles
       - media_volume:/home/app/web/mediafiles
