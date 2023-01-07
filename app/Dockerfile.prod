@@ -16,23 +16,23 @@ ENV PYTHONUNBUFFERED 1
 RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev
 
-# lint
+# update pip
 RUN pip install --upgrade pip
+
+# ignore pip as root warning
+ENV PIP_ROOT_USER_ACTION=ignore
+
+# lint
 RUN pip install flake8==3.9.2
 COPY . .
 RUN flake8 --ignore=E501,F401 .
 
 # install dependencies
-RUN adduser -D myuser
-USER myuser
-WORKDIR /home/myuser
+COPY ./requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
 
-COPY --chown=myuser:myuser requirements.txt requirements.txt
-RUN pip install --user -r requirements.txt
-
-ENV PATH="/home/myuser/.local/bin:${PATH}"
-
-COPY --chown=myuser:myuser . .
+# wheel
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
 
 
 #########
@@ -79,6 +79,9 @@ RUN chown -R app:app $APP_HOME
 
 # change to the app user
 USER app
+
+# chmod entrypoint
+RUN chmod +x entrypoint.prod.sh
 
 # run entrypoint.prod.sh
 ENTRYPOINT ["/home/app/web/entrypoint.prod.sh"]
